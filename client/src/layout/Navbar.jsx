@@ -7,9 +7,7 @@ function Navbar({ isLoggedIn, onLogoutClick, onLoginClick, onRegisterClick }) {
     <nav className="sticky top-0 z-50 bg-white shadow-lg border-b-2 border-black">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-3">
-          <div className="h-10 w-10 bg-black rounded-lg flex items-center justify-center font-bold text-lg text-white border-2 border-black">
-            C
-          </div>
+          
           <span className="text-2xl font-bold text-black">
             Coursin
           </span>
