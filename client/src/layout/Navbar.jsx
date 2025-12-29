@@ -11,7 +11,7 @@ function Navbar({ isLoggedIn, onLogoutClick, onLoginClick, onRegisterClick }) {
             C
           </div>
           <span className="text-2xl font-bold text-black">
-            CourseMaster
+            Coursin
           </span>
         </div>
         
