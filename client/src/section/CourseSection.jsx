@@ -525,21 +525,38 @@ const CourseSection = ({ courses: propCourses = [] }) => {
             </div>
           </div>
           
-          {/* Results and Clear Filters */}
-          <div className="flex flex-col sm:flex-row justify-between items-center mt-6 pt-6 border-t-2 border-black">              
-                    
-            <div className="flex items-center space-x-4">
-              {(searchQuery || selectedCategory !== 'All Categories' || selectedLevel !== 'All Levels') && (
-                <button
-                  onClick={handleClearFilters}
-                  className="px-4 py-2 text-sm bg-white hover:bg-gray-100 border-2 border-black rounded-lg transition-all duration-300"
-                  type="button"
-                >
-                  Clear All Filters
-                </button>
-              )}
-            </div>
-          </div>
+        {/* Results and Clear Filters */}
+<div className="flex flex-col sm:flex-row justify-between items-center mt-6 pt-6 border-t-2 border-black">              
+  <div className="mb-4 sm:mb-0">
+    <div className="flex items-center space-x-2">
+      <span className="text-sm text-gray-600">Popular searches:</span>
+      <div className="flex flex-wrap gap-2">
+        {['React', 'JavaScript', 'Python', 'Web Development', 'Data Science'].map((tag) => (
+          <button
+            key={tag}
+            onClick={() => setSearchQuery(tag)}
+            className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg transition-all duration-300 border border-gray-300"
+            type="button"
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+  
+  <div className="flex items-center space-x-4">
+    {(searchQuery || selectedCategory !== 'All Categories' || selectedLevel !== 'All Levels') && (
+      <button
+        onClick={handleClearFilters}
+        className="px-4 py-2 text-sm bg-white hover:bg-gray-100 border-2 border-black rounded-lg transition-all duration-300"
+        type="button"
+      >
+        Clear All Filters
+      </button>
+    )}
+  </div>
+</div>
         </div>
         
         {/* Course Grid */}
