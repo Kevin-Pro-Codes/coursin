@@ -527,12 +527,7 @@ const CourseSection = ({ courses: propCourses = [] }) => {
           
           {/* Results and Clear Filters */}
           <div className="flex flex-col sm:flex-row justify-between items-center mt-6 pt-6 border-t-2 border-black">              
-            <div className="mb-4 sm:mb-0">
-              <p className="text-gray-800 font-medium">
-                Showing <span className="font-bold text-black">{filteredCourses.length}</span> of <span className="font-bold text-black">{courses.length}</span> courses
-              </p>
-            </div>
-            
+                    
             <div className="flex items-center space-x-4">
               {(searchQuery || selectedCategory !== 'All Categories' || selectedLevel !== 'All Levels') && (
                 <button
