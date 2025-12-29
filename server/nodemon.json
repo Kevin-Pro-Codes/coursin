@@ -1,0 +1,22 @@
+{
+  "watch": [
+    "server.js",
+    "controllers/",
+    "database/",
+    "middleware/",
+    "utils/"
+  ],
+  "ignore": [
+    "node_modules/",
+    "*.test.js",
+    "*.spec.js",
+    ".git/"
+  ],
+  "ext": "js,json",
+  "exec": "node server.js",
+  "delay": 1000,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "legacyWatch": false
+}
